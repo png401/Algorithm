@@ -7,11 +7,11 @@ public class Main{
        int first, second;
         
         while(true){
-        	  first = input.nextInt();
-              second = input.nextInt();
+            first = input.nextInt();
+            second = input.nextInt();
         
-              if((first==0)&&(second==0)) {
-            	  break;
+            if((first==0)&&(second==0)) {
+                break;
               }
               
         if(second%first == 0){
