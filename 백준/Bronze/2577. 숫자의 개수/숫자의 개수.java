@@ -19,13 +19,13 @@ public class Main {
         int three =((num/10)/10)%10;//백의 자리수
         */
        
-        int count=0;
+        
         while (num > 0) {
         	int t = num % 10;
         	
         	arr[t]++;
         	num /= 10;
-        	count++;
+        	
         }
         
         for(int i=0; i<10; i++) {
