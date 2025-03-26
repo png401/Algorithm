@@ -1,30 +1,28 @@
 import java.util.Scanner;
 
-public class Main{
-    public static void main(String[] args){
-    
-    	int King, Queen, Look, Bishop, Knight, Pawn;
-    	
-    	Scanner input = new Scanner(System.in);
-    	
-    	King = input.nextInt();
-    	Queen = input.nextInt();
-    	Look = input.nextInt();
-    	Bishop = input.nextInt();
-    	Knight = input.nextInt();
-    	Pawn = input.nextInt();
-    	
-    	int nking, nqueen, nlook, nbishop, nknight, npawn;
-    	
-    	nking = 1-King;
-    	nqueen = 1-Queen;
-    	nlook = 2-Look;
-    	nbishop = 2-Bishop;
-    	nknight = 2-Knight;
-    	npawn = 8-Pawn;
-    	
-    	System.out.print(nking+" "+nqueen+" "+nlook+" "+nbishop+" "+ nknight+" "+npawn);
-    	
-    }
-    }
+public class Main {
+
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	
+	int [] chess = {1, 1, 2, 2, 2, 8};
+	int [] input = new int [6];
+	int [] output = new int [6];
+	
+	for(int i=0; i<6; i++) {
+		input[i] = sc.nextInt();
+	}
+	
+	for(int i=0; i<6; i++) {
+		output[i] = chess[i] - input[i];
+	}
+	
+	for(int i=0; i<6; i++) {
+		System.out.print(output[i]+" ");
+		
+	}
+	
+	sc.close();
+	}
+}
         
