@@ -1,20 +1,18 @@
 import java.util.Scanner;
 
-public class Main{
-    public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         
-        int A = input.nextInt();
-        int B = input.nextInt();
+        int A = sc.nextInt();
+        int B = sc.nextInt();
         
         if(A>B){
             System.out.println(">");
-        }
-        else if(A<B){
+        } else if(A<B){
             System.out.println("<");
-        }
-        else
+        }else {
             System.out.println("==");
+        }
     }
-    
 }
