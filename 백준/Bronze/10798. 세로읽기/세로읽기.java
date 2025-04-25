@@ -9,32 +9,31 @@ public class Main{
         
         String line ="";
         int max=0;
-        char [][] ar = new char [5][];
+        char [][] ar = new char [5][15];
         
-        //얘는 공백 만나면 죽어버림....
-        //string nextline 입력받기
         for(int i=0; i<5; i++) {
-        	line = sc.nextLine();
-        	ar[i] = line.toCharArray();
-        	if(max<line.length()) max=line.length();
-        	/*이게 틀렸다... 왤까?
-        	  for(int j=0; j<line.length(); j++) {
-        	char[i][j] ar = line.toCharArray();
-        	}*/
+        	for(int j=0; j<15; j++) {
+        		ar [i][j] =' ';
+        	}
         }
         
-        //그럼 이제 출력하기
-        for(int j=0; j<max; j++) {
-        	for(int i=0; i<5; i++) {
-        		//그래..가변배열이니까 그냥 0123열까지밖에 없는거일거야..
-        		//if(ar[i][j]==' ') {System.out.print("");}
-        		if(j < ar[i].length)
-                //그니까 가변배열 열크기만큼만 출력하자 생각하는거잖아..
-        		//고정배열로도 연습해보기
-        		System.out.print(ar[i][j]);
+        //배열 입력받기. String.charAt(인덱스);
+        for(int i=0; i<5; i++) {
+        	line = sc.nextLine();
+        	for(int j=0; j<line.length(); j++) {
+        		ar[i][j] = line.charAt(j);
+        		//아 이것만 쓰면 0~14까지 돌다가 line.charAt(j)
+        		//못 받는 불쌍한 애들이 생기면 에러가 생긴대...
+        		//그래서 그것들을 ' ' 해줘야한다함..
         	}
-	
-     }
-    
+        	
+        }
+        
+        //배열 출력
+        for(int j=0; j<15; j++) {
+        	for(int i=0; i<5; i++) {
+        		if(ar[i][j] != ' ') System.out.print(ar[i][j]);
+        	}
+        }
 }
 }
