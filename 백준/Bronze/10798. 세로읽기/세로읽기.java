@@ -29,29 +29,11 @@ public class Main{
         		//그래..가변배열이니까 그냥 0123열까지밖에 없는거일거야..
         		//if(ar[i][j]==' ') {System.out.print("");}
         		if(j < ar[i].length)
+                //그니까 가변배열 열크기만큼만 출력하자 생각하는거잖아..
+        		//고정배열로도 연습해보기
         		System.out.print(ar[i][j]);
         	}
-        
-        
-        	
-        	/*char[][] ar = new char [5][];
-            int max=0;
-            String line1 ="";
-            String line2 ="";
-            String line3 ="";
-            String line4 ="";
-            String line5 ="";
-            
-            
-            line1 = sc.nextLine();
-            line2 = sc.nextLine();
-            line3 = sc.nextLine();
-            line4 = sc.nextLine();
-            line5 = sc.nextLine();
-
-            line1.charAt(0)
-            */
-        	
+	
      }
     
 }
