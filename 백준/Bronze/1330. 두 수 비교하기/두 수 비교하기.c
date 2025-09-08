@@ -1,24 +1,16 @@
 #include <stdio.h>
 
 int main(){
-
-
-    int a, b;
-    scanf("%d %d", &a, &b);
+    int A, B;
+    scanf("%d %d", &A, &B);
     
-    if(a>b){
+    if(A>B){
         printf(">");
-}
-
-else if(b>a){
-printf("<");
-}
-    
+    }
+    else if(A<B){
+        printf("<");
+    }
     else {
-printf("==");
-
-}
-    
-return 0;
-
+        printf("==");
+    }
 }
