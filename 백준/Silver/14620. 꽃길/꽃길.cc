@@ -2,6 +2,24 @@
 #include <vector>
 using namespace std;
 
+int getCost(int r, int c, vector<vector<int>>& ground) {
+    //중심
+    int cost = ground[r][c];
+
+    //좌우
+    for (int i=-1; i<=1; i++) {
+        if (i==0) continue;
+        cost += ground[r][c+i];
+    }
+    //상하
+    for (int j=-1; j<=1; j++) {
+        if (j==0) continue;
+        cost += ground[r+j][c];
+    }
+    
+    return cost;
+}
+
 int main() {
     //n 입력받기
     int n;
@@ -44,11 +62,12 @@ int main() {
                 if (abs(r3-r2) + abs(c3-c2) <= 2 || abs(r3-r1) + abs(c3-c1) <= 2) continue;
 
                 //여기까지 들어왔으면 최솟값 갱신해야 함
-                int cost =
-                    ground[r1][c1] + ground[r1][c1+1] + ground[r1][c1-1] + ground[r1-1][c1] + ground[r1+1][c1]
-                + ground[r2][c2] + ground[r2][c2+1] + ground[r2][c2-1] + ground[r2-1][c2] + ground[r2+1][c2]
-                + ground[r3][c3] + ground[r3][c3+1] + ground[r3][c3-1] + ground[r3-1][c3] + ground[r3+1][c3];
+                int cost = getCost(r1, c1, ground)
+                        + getCost(r2, c2, ground)
+                        + getCost(r3, c3, ground);
+                
 
+                //최솟값
                 answer = min(answer, cost);
             }
         }
