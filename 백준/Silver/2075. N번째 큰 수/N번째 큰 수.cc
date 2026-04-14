@@ -19,6 +19,7 @@ int main() {
     cin >> n;
 
     //최소 힙 선언
+    //int 타입, 인트형 벡터에 저장, 정렬기준 민힙
     priority_queue<int, vector<int>, greater<int>> pq;
     int x;
     for (int i=0; i<n*n; i++) {
@@ -31,7 +32,7 @@ int main() {
             pq.pop();
         }
     }
-    
+
     //반복 다 돌고 나서 젤 작은 값=n번째 큰 값 출력
     //예) 최종민힙 : 3 5 8 9 10, 5번째 큰 값 : 3
     cout << pq.top();
